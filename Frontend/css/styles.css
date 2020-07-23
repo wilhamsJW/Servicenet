@@ -3,18 +3,18 @@
 
    text-align: center;
    padding: 40px;
-   background-color:#080411;
+   background-color:#23104c;
    border-radius: 10px;
 }
 
 #font{
     font-weight: bold;
-    color: #2e1763;
+    color:#080411;
 
 }
 
-body{
-    background: url(../img/logo.jpg) no-repeat;
+#B{
+    background: url(../img/logo2.jpg) no-repeat;
     background-size:cover;
 }
 
@@ -24,4 +24,5 @@ body{
 
 #button{
     background-color: #6639d0;
+    font-weight: bold;
 }
