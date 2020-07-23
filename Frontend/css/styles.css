@@ -1,0 +1,27 @@
+#formu {
+  
+
+   text-align: center;
+   padding: 40px;
+   background-color:#080411;
+   border-radius: 10px;
+}
+
+#font{
+    font-weight: bold;
+    color: #2e1763;
+
+}
+
+body{
+    background: url(../img/logo.jpg) no-repeat;
+    background-size:cover;
+}
+
+#inpu{
+    color:blue;
+}
+
+#button{
+    background-color: #6639d0;
+}
