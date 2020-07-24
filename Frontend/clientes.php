@@ -16,7 +16,7 @@
         <th scope="col"><i class="fas fa-flag"></i>&nbsp;Estado</th>
         <th scope="col"><i class="fas fa-flag-usa"></i>&nbsp;País</th>
         <th scope="col"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</th>
-        <th scope="col"><i class="fas fa-location-arrow"></i>&nbsp;Ação</th>
+        <th scope="col"><i class="fas fa-pen-nib"></i>&nbsp;Ação</th>
 
 
       </tr>
@@ -33,15 +33,15 @@
       <td><?php   ?></td>
       <td><?php   ?></td>
       <td><?php   ?></td>
-      <!-- Button to acrtive modal Edite -->
-      <td><a class="btn btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado" style="color:white;background-color:#9a78e2" href="editar.php?id=<?php ?>" role="button"><i class="fas fa-edit"></i>&nbsp;Editar</a>
+      <!-- Button to active modal Edite -->
+      <td><a class="btn btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado1" style="color:white;background-color:#9a78e2" href="editar.php?id=<?php ?>" role="button"><i class="fas fa-edit"></i>&nbsp;Editar</a>
 
         <!-- Modal Edite-->
-        <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal fade" id="ExemploModalCentralizado1" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Edição de Cadastro de Cliente</h5>
+                <h5 class="modal-title" id="TituloModalCentralizado">Edição de Cadastro de Clientes</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -49,80 +49,64 @@
               <div class="modal-body">
 
 
-                <form class="needs-validation" novalidate>
-                  <div class="form-row">
-                    <div class="col-md-4 mb-3">
-                      <label for="validationCustom01">Nome</label>
-                      <input type="text" class="form-control" id="validationCustom01" placeholder="Nome" value="Mark" required>
-                      <div class="valid-feedback">
-                        Tudo certo!
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label for="validationCustom02">Telefone</label>
-                      <input type="text" class="form-control" id="validationCustom02" placeholder="Telefone" value="Otto" required>
-                      <div class="valid-feedback">
-                        Tudo certo!
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label for="validationCustomUsername">Endereço</label>
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                        </div>
-                        <input type="Endereço" class="form-control" id="validationCustomUsername" placeholder="Endereço" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                          Por favor, escolha um número.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                      <label for="validationCustom05">Número</label>
-                      <input type="number" class="form-control" id="validationCustom05" placeholder="Número" required>
-                      <div class="invalid-feedback">
-                        Por favor, informe um CEP válido.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                      <label for="validationCustom03">Cidade</label>
-                      <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
-                      <div class="invalid-feedback">
-                        Por favor, informe uma cidade válida.
-                      </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                      <label for="validationCustom04">Estado</label>
-                      <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
-                      <div class="invalid-feedback">
-                        Por favor, informe um estado válido.
-                      </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                      <label for="validationCustom04">País</label>
-                      <input type="text" class="form-control" id="validationCustom04" placeholder="País" required>
-                      <div class="invalid-feedback">
-                        Por favor, informe País.
-                      </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                      <label for="validationCustom05">CEP</label>
-                      <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
-                      <div class="invalid-feedback">
-                        Por favor, informe um CEP válido.
-                      </div>
-                    </div>
-                  </div>
-                  <button class="btn btn-primary" type="submit">Enviar</button>
-                </form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do cliente</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome do cliente">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-address-card"></i>&nbsp;Endereço</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-list-ol"></i>&nbsp;Número</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-city"></i>&nbsp;Cidade</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cidade">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-flag"></i>&nbsp;Estado</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Estado">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-flag-usa"></i>&nbsp;País</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CEP">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+                
+
+                
+
 
 
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp;Fechar</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp;Salvar mudanças</button>
               </div>
             </div>
           </div>

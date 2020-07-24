@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div style="text-align: right;">
-                            <input class="btn btn-primary" id="font" type="submit" value="Entrar">
+                            <a class="btn btn-sm btn-primary" href="clientes.php" id="font" role="button"><i class="fas fa-sign-in-alt"></i>&nbsp;Entrar</a>
                         </div>
                         <div id="font">Não tem uma conta?&nbsp;<a href="index.php"><i class="far fa-hand-point-left"></i>&nbsp;Cadastre-se</a></div>
                     </fieldset>
