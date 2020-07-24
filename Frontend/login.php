@@ -23,7 +23,7 @@
                 <form action="banco_de_dados/create.php" method="POST" class="py-">
                     <fieldset class="formulario">
                         <h1 class="text-center" id="font">Login</h1>
-                        <div class="form-group row" style="30px">
+                        <div class="form-group row" style="margin-top: 30px">
                             <label for="inputEmail3" id="font" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
                                 <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
@@ -36,9 +36,9 @@
                             </div>
                         </div>
                         <div style="text-align: right;">
-                            <input class="btn" id="button" type="submit" value="Entrar">
+                            <input class="btn btn-primary" id="font" type="submit" value="Entrar">
                         </div>
-                        <div><a href="index.php"><i class="far fa-hand-point-left"></i>&nbsp;Não tem uma conta? Cadastre-se</a></div>
+                        <div id="font">Não tem uma conta?&nbsp;<a href="index.php"><i class="far fa-hand-point-left"></i>&nbsp;Cadastre-se</a></div>
                     </fieldset>
                 </form>
             </fieldset>

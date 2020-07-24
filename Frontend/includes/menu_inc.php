@@ -13,7 +13,7 @@
                         <a class="nav-link" href="index.php" id="nav1"><i class="fas fa-user-check"></i>&nbsp;Cadastrar Cliente<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login2.php" id="nav2"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
+                        <a class="nav-link" href="login.php" id="nav2"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="minhaarea2.php"></a>
