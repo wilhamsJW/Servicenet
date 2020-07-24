@@ -35,3 +35,10 @@
 #nav2{
     color: white;
 }
+
+#formulario{
+    width: 650px;
+    margin-top: 80px;
+    font-weight: bold;
+    color: violet;
+}

@@ -27,7 +27,6 @@
                         <fieldset class="formulario">
                             <h1 class="text-center" id="font">Cadastro</h1>
                             <div class="form-group row" style="margin-top: 30px">
-
                                 <div class="col-sm-12">
                                     <div class="input-group-prepend"><span class="input-group-text bg-white px-4 border-md border-right-0"><i class="fas fa-user-alt"></i></span>
                                         <input type="name" name="name" id="inpu" class="form-control" placeholder="Nome do usuário">
@@ -57,7 +56,7 @@
                             </div>
                             <div class="form-group">
                                 <a href="#" class="btn btn-primary btn-block py-2">
-                                <span class="font-weight-bold" id="font"><i class="fab fa-facebook"></i>&nbsp;Continue com Facebook</span>
+                                    <span class="font-weight-bold" id="font"><i class="fab fa-facebook"></i>&nbsp;Continue com Facebook</span>
                                 </a>
                             </div>
 
