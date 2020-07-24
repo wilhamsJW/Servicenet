@@ -1,6 +1,4 @@
 #formu {
-  
-
    text-align: center;
    padding: 40px;
    background-color:#23104c;
@@ -9,8 +7,7 @@
 
 #font{
     font-weight: bold;
-    color:#080411;
-
+    color: white;
 }
 
 #B{
@@ -25,4 +22,16 @@
 #button{
     background-color: #6639d0;
     font-weight: bold;
+}
+
+.menu{
+    background-color: #23104c;
+}
+
+#nav1{
+    color: white;
+}
+
+#nav2{
+    color: white;
 }
