@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,13 +25,13 @@
         <div class="container py-5">
             <div class="col-md-6 container clearfix">
                 <fieldset id="formu">
-                    <form action="banco_de_dados/create.php" method="POST" class="py-">
+                    <form action="../Backend/Database/create.php" method="POST" class="py-">
                         <fieldset class="formulario">
                             <h1 class="text-center" id="font">Cadastro</h1>
                             <div class="form-group row" style="margin-top: 30px">
                                 <div class="col-sm-12">
                                     <div class="input-group-prepend"><span class="input-group-text bg-white px-4 border-md border-right-0"><i class="fas fa-user-alt"></i></span>
-                                        <input type="name" name="name" id="inpu" class="form-control" placeholder="Nome do usuário">
+                                        <input type="name" name="nome" id="inpu" class="form-control" placeholder="Nome do usuário">
                                     </div>
                                 </div>
                             </div>
@@ -45,18 +47,18 @@
 
                                 <div class="col-sm-12">
                                     <div class="input-group-prepend"><span class="input-group-text bg-white px-4 border-md border-right-0"><i class="fas fa-unlock-alt"></i></span>
-                                        <input type="password" name="senha2" class="form-control" id="inputPassword3" placeholder="Senha">
+                                        <input type="password" name="senha" class="form-control" id="inputPassword3" placeholder="Senha">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <a href="#" class="btn btn-primary btn-block py-2 ">
+                                <button class="btn btn-primary btn-block py-2" type="submit"><a>
                                     <span class="font-weight-bold">Cadastrar</span>
-                                </a>
+                                </a></button>
                             </div>
                             <div class="form-group">
                                 <a href="#" class="btn btn-primary btn-block py-2">
-                                    <span class="font-weight-bold" id="font"><i class="fab fa-facebook"></i>&nbsp;Continue com Facebook</span>
+                                    <span class="font-weight-bold" id="font"><i class="fab fa-facebook"></i>&nbsp;Entrar com Facebook</span>
                                 </a>
                             </div>
 
