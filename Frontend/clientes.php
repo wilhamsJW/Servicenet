@@ -1,6 +1,15 @@
 <?php include_once 'includes/header_inc.php' ?>
 <?php include_once 'includes/menu_inc.php' ?>
 
+<?php 
+  
+  if ( !isset($_SESSION["user"])) {  
+    header("location:index.php");
+  }                               
+
+?>
+
+
 <div class="container">
   <h2 id="font">Lista de Clientes</h2>
 
