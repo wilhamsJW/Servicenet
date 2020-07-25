@@ -10,6 +10,12 @@
     color: white;
 }
 
+#font2{
+    font-weight: bold;
+    color:yellow;
+    margin-top: 90px;
+}
+
 #B{
     background: url(../img/logo2.jpg) no-repeat;
     background-size:cover;

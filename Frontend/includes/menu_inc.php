@@ -1,5 +1,12 @@
 <?php include_once 'includes/header_inc.php'; ?>
 
+<?php 
+  if ( !isset($_SESSION["user"])) {  
+    header("location:login.php");
+  }                               
+
+?>
+
 <div class="menu">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -93,12 +100,7 @@
     </nav>
 </div>
 
-<?php
-if (isset($_SESSION["user"])) {
-?>
-    <div class="container" id="saudacao" style="margin-top: 10px; font-weight:bold;"><h3><?php echo "Bem Vindo(a)" . " " . $_SESSION["user"] . "!" ?></h3></div>
 
-<?php } ?>
 
 
 <?php include_once 'includes/footer_inc.php' ?>

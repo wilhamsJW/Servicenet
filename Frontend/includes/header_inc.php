@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php include_once '../Backend/Database/connection.php' ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
