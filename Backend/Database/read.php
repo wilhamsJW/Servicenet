@@ -1,12 +1,12 @@
 <?php
 include_once 'connection.php';
-session_start();
+//session_start();
 
 //verficando se os campos estão vazios
-if (!empty($_POST) and (empty($_POST['nome']) or empty($_POST['senha']))) {
-    header("Location:../../Frontend/login.php");
-    //exit;
-    $mensagem = "Preencha os campos";
+if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
+    header("location:../../Frontend/errologin.php");
+    exit;
+    //$mensagem = "Preencha os campos";
 }
 
 //verificação de email e senha
@@ -35,5 +35,12 @@ if (isset($_POST["email"])) {
         header("location:../../Frontend/clientes.php");
     }
 }
+
+?>
+
+<?php 
+
+    $query_list = "SELECT * FROM clientes";
+    $query = mysqli_query($conecta, $query_list);
 
 ?>

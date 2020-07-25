@@ -21,6 +21,7 @@
                     </li>
                     <!-- Modal Register-->
                     <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                        <form action="../Backend/Database/create.php" method="POST">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -29,63 +30,63 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
+
                                 <div class="modal-body">
-
-
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do cliente</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome do cliente">
+                                        <input type="text" class="form-control" name="nome1" min="4" max="20" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome do cliente">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+                                        <input type="text" class="form-control" name="telefone" min="9" max="30" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-address-card"></i>&nbsp;Endereço</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
+                                        <input type="text" class="form-control" name="endereco" min="4" max="50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-list-ol"></i>&nbsp;Número</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
+                                        <input type="text" class="form-control" name="numero" min="1" max="10" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-city"></i>&nbsp;Cidade</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cidade">
+                                        <input type="text" class="form-control" name="cidade" min="4" max="20" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cidade">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-flag"></i>&nbsp;Estado</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Estado">
+                                        <input type="text" class="form-control" name="estado" min="1" max="20" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Estado">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-flag-usa"></i>&nbsp;País</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
+                                        <input type="text" class="form-control" name="pais" min="2" max="20" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CEP">
+                                        <input type="text" class="form-control" name="cep"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CEP">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp;Fechar</button>
-                                    <button type="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp;Salvar mudanças</button>
+                                    <button type="submit" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp;Fechar</button>
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp;Salvar mudanças</button>
                                 </div>
                             </div>
                         </div>
+                        </form>
                     </div> <!-- End Modal Register -->
 
                     <li class="nav-item">
