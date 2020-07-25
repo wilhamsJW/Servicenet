@@ -31,7 +31,7 @@ if (isset($_POST["email"])) {
         //header("location: ../login2.php");   
     } else {
         //Rotina de saudação iniciada aqui
-        $_SESSION["user"] = $informacao["id"];
+        $_SESSION["user"] = $informacao["nome"];
         header("location:../../Frontend/clientes.php");
     }
 }

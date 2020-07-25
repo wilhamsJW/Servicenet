@@ -1,7 +1,7 @@
 <?php include_once 'includes/header_inc.php' ?>
 <?php include_once 'includes/menu_inc.php' ?>
 
-<div class="container" style="margin-top: 40px;">
+<div class="container">
   <h2 id="font">Lista de Clientes</h2>
 
   <table class="table table-striped">
@@ -96,13 +96,7 @@
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CEP">
                   <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
-
-
-
-
-
-
-
+                
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp;Fechar</button>

@@ -1,4 +1,5 @@
-<?php include_once 'includes/header_inc.php' ?>
+<?php include_once 'includes/header_inc.php';
+session_start(); ?>
 
 <div class="menu">
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -81,7 +82,6 @@
                         </div>
                     </div> <!-- End Modal Register -->
 
-
                     <li class="nav-item">
                         <a class="nav-link" href="login.php" id="nav2"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
                     </li>
@@ -93,5 +93,13 @@
         </div>
     </nav>
 </div>
+
+<?php
+if (isset($_SESSION["user"])) {
+?>
+    <div class="container" id="saudacao" style="margin-top: 10px; font-weight:bold;"><h3><?php echo "Bem Vindo(a)" . " " . $_SESSION["user"] . "!" ?></h3></div>
+
+<?php } ?>
+
 
 <?php include_once 'includes/footer_inc.php' ?>
