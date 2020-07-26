@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" data-toggle="modal" data-target="#ExemploModalCentralizado" href="#" id="nav1"><i class="fas fa-user-check"></i>&nbsp;Cadastrar Cliente<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" data-toggle="modal" data-target="#ExemploModalCentralizado" href="#" id="nav1"><i class="fas fa-user-check"></i>&nbsp;Cadastrar Novo Cliente<span class="sr-only">(current)</span></a>
                     </li>
                     <!-- Modal Register-->
                     <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
