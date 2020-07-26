@@ -9,11 +9,12 @@
 
 
         <?php
-        $id = $_GET['id'];
+        echo $id = $_GET['id'];
 
         $sql = "SELECT * FROM  `clientes` WHERE id = $id";
         $query = mysqli_query($conecta, $sql);
         while ($array = mysqli_fetch_assoc($query)) {
+            $id = $array['id'];
             $nome1 = $array['nome1'];
             $telefone = $array['telefone'];
             $endereco = $array['endereco'];
@@ -33,47 +34,48 @@
                     <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do Cliente</label>
                     <input type="text" value="<?php echo $nome1 ?>" class="form-control" aria-describedby="emailHelp" placeholder="Nome do cliente">
                     <small id="emailHelp" class="form-text text-muted"></small>
+                    <input  name="nome1" value="<?php echo $id ?>" style="display:none">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-                    <input type="number" value="<?php echo $telefone ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+                    <input type="number" name="telefone" value="<?php echo $telefone ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-address-card"></i>&nbsp;Endereço</label>
-                    <input type="text" value="<?php echo $endereco ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
+                    <input type="text" name="endereco" value="<?php echo $endereco ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-list-ol"></i>&nbsp;Número</label>
-                    <input type="number" value="<?php echo $numero ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
+                    <input type="number" name="numero" value="<?php echo $numero ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-city"></i>&nbsp;Cidade</label>
-                    <input type="text" value="<?php echo $cidade ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cidade">
+                    <input type="text" name="cidade" value="<?php echo $cidade ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cidade">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-flag"></i>&nbsp;Estado</label>
-                    <input type="text" value="<?php echo $estado ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Estado">
+                    <input type="text" name="estado" value="<?php echo $estado ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Estado">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-flag-usa"></i>&nbsp;País</label>
-                    <input type="text" value="<?php echo $pais ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
+                    <input type="text" name="pais" value="<?php echo $pais ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="País">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</label>
-                    <input type="text" value="<?php echo $cep ?>" class="form-control" id="cep" aria-describedby="emailHelp" placeholder="CEP">
+                    <input type="text" name="cep" value="<?php echo $cep ?>" class="form-control" id="cep" aria-describedby="emailHelp" placeholder="CEP">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
