@@ -9,5 +9,10 @@
 <!-- Link Máskara cep e telefone -->
 <script type="text/javascript" src="js/jQuery-Mask-Plugin/jquery.mask.js"></script>
 
+
+<srcipt type="text/javascript" src="js/mask_jquery.js"></srcipt>
+<script type="text/javascript" src="js/mask.js"></script>
+<script type="text/javascript" src="js/mapa.js"></script>
+
 </body>
 </html>
