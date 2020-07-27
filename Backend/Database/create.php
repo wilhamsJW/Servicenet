@@ -1,13 +1,14 @@
 <?php
 include_once 'connection.php';
+//session_start();
+
+if (!empty($_POST) and (empty($_POST['nome']) or empty($_POST['email']) or empty($_POST['senha']))) {
+    //$mensagem = "Preencha todos os campos!";
+    //header("location:../../Frontend/index.php");      
+}
+
 
 if (isset($_POST["nome"])) {
-
-    if (!empty($_POST) and (empty($_POST['nome']) or empty($_POST['email']) or empty($_POST['senha']))) {
-        header("location:../../Frontend/index.php"); 
-        
-    }
-
 
     $nome     = $_POST["nome"];
     $email    = $_POST["email"];
@@ -28,7 +29,7 @@ if (isset($_POST["nome"])) {
     if (!$query) {
         die("Error no servidor ou email já cadastrado");
     } else {
-        //header("location:../../Frontend/login.php");
+        header("location:../Frontend/index.php");
     }
 }
 ?>

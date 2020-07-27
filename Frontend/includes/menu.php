@@ -1,9 +1,9 @@
 <?php include_once 'includes/header_inc.php'; ?>
 
-<?php 
+<?php /*
   if ( !isset($_SESSION["user"])) {  
     header("location:login.php");
-  }                               
+  }     */                          
 
 ?>
 
@@ -103,5 +103,5 @@
 
 
 
-
-<?php include_once 'includes/footer_inc.php' ?>
+<!-- Foi obrigatório colocar o include footer, pois o Jquery precisa ser iniciado tanto no menu como na página clientes.php para que o modal delete consiga enviar a $id para o db -->
+<?php include_once 'footer_inc.php'; ?>

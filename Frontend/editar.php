@@ -1,5 +1,5 @@
-<?php include_once 'includes/header_inc.php' ?>
-<?php include_once 'includes/menu_inc.php' ?>
+<?php include_once 'includes/header_inc.php';?>
+<?php include_once 'includes/menu.php';?>
 
 
 
@@ -9,7 +9,7 @@
 
 
         <?php
-        echo $id = $_GET['id'];
+        $id = $_GET['id'];
 
         $sql = "SELECT * FROM  `clientes` WHERE id = $id";
         $query = mysqli_query($conecta, $sql);
@@ -32,9 +32,9 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do Cliente</label>
-                    <input type="text" value="<?php echo $nome1 ?>" class="form-control" aria-describedby="emailHelp" placeholder="Nome do cliente">
+                    <input type="text" name="nome1" value="<?php echo $nome1 ?>" class="form-control" aria-describedby="emailHelp" placeholder="Nome do cliente">
                     <small id="emailHelp" class="form-text text-muted"></small>
-                    <input  name="nome1" value="<?php echo $id ?>" style="display:none">
+                    <input  name="id" value="<?php echo $id ?>" style="display:none">
                 </div>
 
                 <div class="form-group">

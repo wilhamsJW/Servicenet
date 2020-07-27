@@ -1,14 +1,14 @@
 <?php include_once 'includes/header_inc.php' ?>
-<?php include_once 'includes/menu_inc.php' ?>
+<?php include_once 'includes/menu.php' ?>
 <?php include_once '../Backend/Database/read.php' ?>
 <?php include_once '../Backend/Database/connection.php' ?>
 
 
-<?php 
+<?php /*
 if (!isset($_SESSION["user"])) {
   header("location:login.php");
 }
-
+*/
 ?>
 
 <?php
@@ -92,7 +92,7 @@ if (isset($_SESSION["user"])) {
 
           <div class="form-group">
             <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do cliente</label>
-            <input type="email" class="form-control" id="nome2" aria-describedby="emailHelp" placeholder="Nome do cliente">
+            <input type="email" class="form-control" id="nome2" maxlength="10" aria-describedby="emailHelp" placeholder="Nome do cliente">
             <small id="emailHelp" class="form-text text-muted"></small>
           </div>
 
@@ -148,25 +148,7 @@ if (isset($_SESSION["user"])) {
 
 
 
-    <!-- Modal to activate modal delete -->
-    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir?</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-sm btn-secondary" href="clientes.php" role="button"><i class="fas fa-times-circle"></i>&nbsp;Não!</a>
-            <a class="btn btn-sm btn-danger" class="btn btn-primary" href="../Backend/Database/delete.php?id=<?php echo "3" ?>"><i class="far fa-trash-alt"></i>&nbsp;Sim, quero excluir!</a>
-          </div>
-        </div>
-      </div>
-    </div> <!-- End Modal Delete -->
+    
 
   </div>
 </div>

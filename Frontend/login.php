@@ -1,8 +1,6 @@
-<?php include_once '../Backend/Database/read.php' ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<?php include_once '../Backend/Database/read.php' ?>
 <head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
@@ -25,7 +23,7 @@
         <div class="container py-5">
             <div class="col-md-6 container clearfix">
                 <fieldset id="formu">
-                    <form action="../Backend/Database/read.php" method="POST" class="py-">
+                    <form action="login.php" method="POST" class="py-">
                         <fieldset class="formulario">
                             <h1 class="text-center" id="font">Login</h1>
 
@@ -52,7 +50,7 @@
                                 </div>
                             </div>
                             <div style="text-align: right;">
-                                <button class="btn btn-sm btn-primary"><a id="font" role="button"><i class="fas fa-sign-in-alt"></i>&nbsp;Entrar</a></button>
+                                <button type="submit" class="btn btn-sm btn-primary"><a id="font"><i class="fas fa-sign-in-alt"></i>&nbsp;Entrar</a></button>
                             </div>
                             <div id="font">Não tem uma conta?&nbsp;<a href="index.php"><i class="far fa-hand-point-left"></i>&nbsp;Cadastre-se</a></div>
                         </fieldset>

@@ -1,19 +1,8 @@
 <?php include_once 'connection.php';
 
 if (isset($_POST['id'])) {
-    $id = $_POST["id"];
-    /*
-    $id = $_POST['id'];
-    $nome1 = $_POST['nome1'];
-    $telefone = $_POST['telefone'];
-    $endereco = $_POST['endereco'];
-    $numero = $_POST['numero'];
-    $cidade = $_POST['cidade'];
-    $estado = $_POST['estado'];
-    $pais = $_POST['pais'];
-    $cep = $_POST['cep'];*/
-
-   
+    echo $id = $_POST['id'];
+  
     $id            = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
     $nome1   = filter_input(INPUT_POST, 'nome1', FILTER_SANITIZE_SPECIAL_CHARS);
     $telefone     = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -27,7 +16,7 @@ if (isset($_POST['id'])) {
     $sql = "UPDATE `clientes` SET `nome1`='$nome1', `telefone`='$telefone', `endereco`='$endereco', `numero`='$numero', `cidade`='$cidade', `estado`='$estado', `pais`='$pais', `cep`='$cep' WHERE id = $id";
     $query = mysqli_query($conecta, $sql);
 
-    /*$info = mysqli_fetch_assoc($query);
+    $info = mysqli_fetch_assoc($query);
 
     if (!empty($info)) {
         echo "Erro na Alteração!";
@@ -35,7 +24,7 @@ if (isset($_POST['id'])) {
     } else {
         $mensagem = "Alterado Com Sucesso";
         header("location:../../Frontend/clientes.php");
-    }*/
+    }
 }
 
 ?>
