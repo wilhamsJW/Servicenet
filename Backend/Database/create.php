@@ -6,8 +6,7 @@ include_once 'connection.php';
 
 if (!empty($_POST) and (empty($_POST['nome']) or empty($_POST['email']) or empty($_POST['senha']))) {
     //$mensagem = "Preencha todos os campos!";
-    header("location:../Frontend/index.php");
-    exit;      
+    header("location:../Frontend/index.php");      
 }
 
 
@@ -45,15 +44,18 @@ if (isset($_POST["nome"])) {
 } //End register user
 ?>
 
-<?php include_once 'connection.php';
-// Register clientes
 
+                 <!-- Regsiter clientes -->
+
+
+<?php include_once 'connection.php';
 //Verificação se o campo tá vazio
 if (isset($_POST["nome1"])) {
 
     if (!empty($_POST) and (empty($_POST['nome1']) or empty($_POST['telefone']) or empty($_POST['endereco']) or empty($_POST['numero']) or empty($_POST['cidade']) or empty($_POST['estado']) or empty($_POST['pais']) or empty($_POST['cep']))) {
         //echo  "<script>alert('Preencha todos os campos!');</script>";
-        header("location:../Frontend/login.php");
+        header("location:../../Frontend/errocadastro.php");
+
         exit;
     }
 
@@ -73,13 +75,10 @@ if (isset($_POST["nome1"])) {
 
     $query = mysqli_query($conecta, $sql);
 
-    if ($query) {
+    if (!$query) {
         die("Error no servidor ou dados não conferem!");
     } else {
-        header("Location: ../../Frontend/clientes.php");
+        header("location:../../Frontend/clientes.php");
     }
-} //End Register clients
-
-
-
+}
 ?>

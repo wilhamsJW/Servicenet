@@ -6,6 +6,8 @@
 <!-- Link do Modal -->
 <script type="../text/javascript" src="js/script.js"></script>
 
-</body>
+<!-- Link Máskara cep e telefone -->
+<script type="text/javascript" src="js/jQuery-Mask-Plugin/jquery.mask.js"></script>
 
+</body>
 </html>

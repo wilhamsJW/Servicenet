@@ -7,8 +7,8 @@
 <?php /*
 if (!isset($_SESSION["user"])) {
   header("location:login.php");
-}
-*/
+}*/
+
 ?>
 
 <?php
@@ -92,13 +92,13 @@ if (isset($_SESSION["user"])) {
 
           <div class="form-group">
             <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do cliente</label>
-            <input type="email" class="form-control" id="nome2" maxlength="10" aria-describedby="emailHelp" placeholder="Nome do cliente">
+            <input type="email" class="form-control" id="nome2" aria-describedby="emailHelp" placeholder="Nome do cliente">
             <small id="emailHelp" class="form-text text-muted"></small>
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+            <input type="text" id="telefone2" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
             <small id="emailHelp" class="form-text text-muted"></small>
           </div>
 
@@ -174,7 +174,7 @@ if (isset($_SESSION["user"])) {
             </button>
           </div>
         <form action="../Backend/Database/delete.php" method="POST">
-         <textarea name="id" style="display: none;" ></textarea>
+         <textarea name="id" style="display: block;" ></textarea>
          
          <div class="modal-footer">
             <a class="btn btn-sm btn-secondary" href="clientes.php" role="button"><i class="fas fa-times-circle"></i>&nbsp;Não!</a>
@@ -199,4 +199,6 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 })
 </script>
 
+<srcipt type="text/javascript" src="js/mask_jquery.js"></srcipt>
+<script type="text/javascript" src="js/mask.js"></script>
 <?php include_once 'includes/footer_inc.php' ?>

@@ -27,9 +27,7 @@
         ?>
 
 
-
-
-            <div class="modal-body">
+            
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do Cliente</label>
                     <input type="text" name="nome1" value="<?php echo $nome1 ?>" class="form-control" aria-describedby="emailHelp" placeholder="Nome do cliente">
@@ -39,7 +37,7 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-                    <input type="number" name="telefone" value="<?php echo $telefone ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+                    <input type="text" id="telefone" name="telefone" value="<?php echo $telefone ?>" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
 
@@ -83,11 +81,16 @@
                     <a href="clientes.php" type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-hand-point-left"></i>&nbsp;Voltar</a>
                     <button type="submit" role="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp;Salvar mudanças</button>
                 </div>
-            </div>
+            
         <?php } ?>
     </form>
 </div>
 </div>
+      
+        
 
 
+
+<srcipt type="text/javascript" src="js/mask_jquery.js"></srcipt>
+<script type="text/javascript" src="js/mask.js"></script>
 <?php include_once 'includes/footer_inc.php' ?>

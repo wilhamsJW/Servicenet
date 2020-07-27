@@ -40,7 +40,7 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-                                        <input type="text" class="form-control" name="telefone" min="9" max="30" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+                                        <input type="text" id="telefone2" class="form-control" name="telefone" min="9" max="30" aria-describedby="emailHelp" placeholder="Telefone">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
 
@@ -76,7 +76,7 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</label>
-                                        <input type="text" class="form-control" name="cep"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CEP">
+                                        <input type="text" class="form-control" name="cep"  id="cep2" aria-describedby="emailHelp" placeholder="CEP">
                                         <small id="emailHelp" class="form-text text-muted"></small>
                                     </div>
                                 </div>
@@ -102,6 +102,7 @@
 </div>
 
 
-
+<srcipt type="text/javascript" src="js/mask_jquery.js"></srcipt>
+<script type="text/javascript" src="js/mask.js"></script>
 <!-- Foi obrigatório colocar o include footer, pois o Jquery precisa ser iniciado tanto no menu como na página clientes.php para que o modal delete consiga enviar a $id para o db -->
 <?php include_once 'footer_inc.php'; ?>
