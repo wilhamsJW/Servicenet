@@ -4,7 +4,7 @@ include_once 'connection.php';
 
 //verficando se os campos estão vazios
 if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
-    header("location:../../Frontend/errologin.php");
+    header("location:../Frontend/login.php");
     exit;
     //$mensagem = "Preencha os campos";
 }
@@ -21,7 +21,7 @@ if (isset($_POST["email"])) {
 
     $acesso = mysqli_query($conecta, $login); 
     if (!$acesso) { 
-        die("Falha na consulta");
+        die("Falha na consulta!");
     }
 
     $informacao = mysqli_fetch_assoc($acesso); 
@@ -32,7 +32,7 @@ if (isset($_POST["email"])) {
     } else {
         //Rotina de saudação iniciada aqui
         $_SESSION["user"] = $informacao["nome"];
-        header("location:../../Frontend/clientes.php");
+        header("location:../Frontend/clientes.php");
     }
 }
 

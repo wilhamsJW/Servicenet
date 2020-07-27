@@ -1,6 +1,6 @@
+<?php include_once "../Backend/Database/create.php" ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include_once "../Backend/Database/create.php" ?>
 <head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
@@ -23,13 +23,13 @@
         <div class="container py-5">
             <div class="col-md-6 container clearfix">
                 <fieldset id="formu">
-                    <form action="form_inc.php" method="POST" class="py-">
+                    <form action="../Frontend/index.php" method="POST" class="py-">
                         <fieldset class="formulario">
                             <h1 class="text-center" id="font">Cadastro</h1>
                             
-                            <?php if (isset($mensagem)) { ?>
+                            <?php if (isset($msg)) { ?>
                                 <div class="alert alert-danger" style="text-align: center" role="alert">
-                                    <?php echo $mensagem ?>
+                                    <?php echo $msg ?>
                                 </div>
                             <?php } ?>
 
@@ -57,9 +57,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary btn-block py-2" type="submit"><a>
+                                <button class="btn btn-primary btn-block py-2" type="submit">
                                     <span class="font-weight-bold">Cadastrar</span>
-                                </a></button>
+                                </button>
                             </div>
                             <div class="form-group">
                                 <a href="#" class="btn btn-primary btn-block py-2">
