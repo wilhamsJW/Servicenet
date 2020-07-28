@@ -1,18 +1,25 @@
-<?php include_once "../Backend/Database/create.php"?>
-
-    <div class="container py-5" style="margin-top: 40px;">
+<?php include_once '../Backend/Database/connection.php';?>
+<?php include_once '../Backend/Database/read.php';?>
+<div class="container py-5" style="margin-top: 40px;">
         <div class="container py-5">
             <div class="col-md-6 container clearfix">
                 <fieldset id="formu">
-                    <form action="../Frontend/index.php" method="POST" class="py-">
+                    <form action="index.php" method="POST" class="py-">
                         <fieldset class="formulario">
                             <h1 class="text-center" id="font">Cadastro</h1>
 
-                            <?php if (isset($msg)) { ?>
+                            <?php if (isset($msg1)) { ?>
                                 <div class="alert alert-danger" style="text-align: center" role="alert">
+                                    <?php echo $msg1 ?>
+                                </div>
+                            <?php } ?>
+
+                            <?php if (isset($msg)) { ?>
+                                <div class="alert alert-success" role="alert">
                                     <?php echo $msg ?>
                                 </div>
                             <?php } ?>
+
 
                             <div class="form-group row" style="margin-top: 30px">
                                 <div class="col-sm-12">
@@ -38,8 +45,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary btn-block py-2" type="submit">
-                                    <span class="font-weight-bold">Cadastrar</span>
+                                <button type="submit" class="btn btn-primary btn-block py-2">
+                                    <a class="font-weight-bold">Cadastrar</a>
                                 </button>
                             </div>
                             <div class="form-group">

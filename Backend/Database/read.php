@@ -1,6 +1,6 @@
 <?php
 include_once 'connection.php';
-//session_start();
+session_start();
 
 //verficando se os campos estão vazios
 if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
@@ -10,7 +10,7 @@ if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
 }
 
 //verificação de email e senha
-if (isset($_POST["email"])) {
+if (isset($_POST["email"]) && !empty($_POST["email"])) {
 
     $email  = $_POST["email"];
     $senha = $_POST["senha"];
@@ -31,7 +31,7 @@ if (isset($_POST["email"])) {
         //header("location: ../login2.php");   
     } else {
         //Rotina de saudação iniciada aqui
-        $_SESSION["user"] = $informacao["nome"];
+        $_SESSION['user'] = $informacao["nome"];
         header("location:../Frontend/clientes.php");
     }
 }

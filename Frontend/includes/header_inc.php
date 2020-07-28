@@ -1,7 +1,7 @@
-<?php session_start(); ?>
-<?php include_once '../Backend/Database/connection.php' ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<!--< ?php var_dump($_SESSION['user']); ?>-->
 
 <head>
   <!-- Meta tags Obrigatórias -->
