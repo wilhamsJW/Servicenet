@@ -30,17 +30,6 @@ if (isset($_POST["nome"])) {
         $msg = "Cadastro realizado com sucesso!";
     }
 
-    //$icrement = mysqli_fetch_assoc($query);
-    //$id_user = $icrement["id"];
-
-/*
-    if (!empty($icrement)) {
-        $msg = "Cadastro realizado com sucesso!";
-        //header("location:../Frontend/index.php");
-    } else {
-        $msg = "increment 2!";
-        header("location:../Frontend/index.php");
-    }*/
 } //End register user
 ?>
 
@@ -54,9 +43,9 @@ if (isset($_POST["nome1"])) {
 
     if (!empty($_POST) and (empty($_POST['nome1']) or empty($_POST['telefone']) or empty($_POST['endereco']) or empty($_POST['numero']) or empty($_POST['cidade']) or empty($_POST['estado']) or empty($_POST['pais']) or empty($_POST['cep']))) {
         //echo  "<script>alert('Preencha todos os campos!');</script>";
-        header("location:../../Frontend/errocadastro.php");
+        //header("location:../../Frontend/errocadastro.php");
 
-        exit;
+        //exit;
     }
 
     $nome1 = $_POST['nome1'];

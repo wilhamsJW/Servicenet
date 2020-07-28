@@ -11,9 +11,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="cadastrar.php" id="nav1"><i class="fas fa-user-check"></i>&nbsp;Cadastrar Novo Cliente<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                   <!-- <li class="nav-item">
                         <a class="nav-link" href="clientes.php" id="nav2"><i class="fas fa-hand-point-left"></i>&nbsp;Voltar</a>
-                    </li>    
+                    </li>-->    
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php" id="nav2"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
                     </li>         

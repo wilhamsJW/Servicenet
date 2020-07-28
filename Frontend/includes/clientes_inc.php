@@ -34,6 +34,7 @@ if (isset($_SESSION["user"])) {
                         <th scope="col"><i class="fas fa-flag-usa"></i>&nbsp;País</th>
                         <th scope="col"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</th>
                         <th scope="col"><i class="fas fa-pen-nib"></i>&nbsp;Ação</th>
+                         <th scope="col"><i class="fas fa-pen-nib"></th>
 
 
                     </tr>
@@ -95,7 +96,7 @@ if (isset($_SESSION["user"])) {
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-                                <input type="text" id="telefone2" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
+                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
                                 <small id="emailHelp" class="form-text text-muted"></small>
                             </div>
 
