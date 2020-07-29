@@ -96,7 +96,7 @@ if (isset($_SESSION["user"])) {
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Telefone">
                                 <small id="emailHelp" class="form-text text-muted"></small>
                             </div>
 

@@ -54,7 +54,7 @@ if (!isset($_SESSION['user'])) {
 
                     <div class="form-group">
                         <label for="exampleInputEmail1"><i class="fas fa-list-ol"></i>&nbsp;Número</label>
-                        <input type="number" name="numero" maxlength="5" value="<?php echo $numero ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
+                        <input type="text" name="numero" maxlength="5" value="<?php echo $numero ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
 
@@ -109,7 +109,6 @@ $('#telefone').mask('(99) 99999-9999');
 $('#cep').mask('99999-999');
 $('#telefone2').mask('(99) 99999-9999');
 $('#cep2').mask('99999-999');
-$('#cep3').mask('99999-999');
 })
 
 
