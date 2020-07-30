@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="form-group">
                                     <a href="#" class="btn btn-primary btn-block py-2">
-                                        <span class="font-weight-bold" id="font"><i class="fab fa-facebook"></i>&nbsp;Entrar com Facebook</span>
+                                        <span class="font-weight-bold" id="font"><i class="fab fa-facebook"></i>&nbsp;Cadastrar com Facebook</span>
                                     </a>
                                 </div>
 

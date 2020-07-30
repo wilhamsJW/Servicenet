@@ -5,8 +5,8 @@ include_once 'connection.php';
 //session_start();
 
 if (!empty($_POST) and (empty($_POST['nome']) or empty($_POST['email']) or empty($_POST['senha']))) {
-    //$mensagem = "Preencha todos os campos!";
-    header("location:../Frontend/index.php");      
+    $msg = "Preencha todos os campos!";
+    //header("location:../Frontend/index.php");      
 }
 
 
@@ -25,13 +25,14 @@ if (isset($_POST["nome"])) {
     $query = mysqli_query($conecta, $sql);
 
     if(!$query){
-        $msg = "E-mail já cadastrado!";
+        $msg = "Opss!!! Este e-mail já está cadastrado!";
     } else {
         $msg = "Cadastro realizado com sucesso!";
     }
 
 } //End register user
 ?>
+
 
 
                  <!-- Regsiter clientes -->

@@ -8,7 +8,7 @@ if (!isset($_SESSION['user'])) {
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3 style="margin-top: 10px;">Cadastro novo cliente</h3>
+                <h3 style="margin-top: 10px;">Cadastrar novo cliente</h3>
                 <p>(Após colocar o cep, tecle a tecla Tab e alguns campos e o mapa são carregados automaticamente.)</p>
 
                 <div class="form-group">
