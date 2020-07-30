@@ -11,15 +11,15 @@ if (!isset($_SESSION['user'])) {
     <div class="row">
         <div class="col-sm-12">
             <h5 style="color: black;font-weight:bold;margin-top:20px">Lista de Clientes</h5>
-            <!--
-< ?php
+            
+<?php
 if (isset($_SESSION["user"])) {
 ?>
   <div class="container" id="saudacao" style="margin-top: 10px; font-weight:bold;">
-    <h3>< ?php echo "Bem Vindo(a)" . " " . $_SESSION["user"] . "!" ?></h3>
+    <h3><?php echo "Bem Vindo(a)" . " " . $_SESSION["user"] . "!" ?></h3>
   </div>
 
-< ?php } ?>  -->
+<?php } ?>  
 
             <table class="table table-striped">
                 <thead>

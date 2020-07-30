@@ -1,12 +1,11 @@
 <?php include_once '../Backend/Database/connection.php'; ?>
 <?php include_once '../Backend/Database/create.php'; ?>
-<?php include_once 'header_inc.php'; ?>
 <div class="container py-5" style="margin-top: 40px;">
     <div class="container py-5">
         <div class="col-md-6 container clearfix">
             <fieldset id="formu">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <form action="index.php" method="POST" class="py-">
                             <fieldset class="formulario">
                                 <h1 class="text-center" id="font">Cadastro</h1>
