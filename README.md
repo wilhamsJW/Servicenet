@@ -5,7 +5,7 @@ Tecnologias:
 
 Backend: Desenvolvido com PHP (puro) e a integração com o Banco de Dados foi o MySQL, a ferramenta usada foi o phpmyadmin.
 
-Frontend: Desenvolvido com Bootstrap, CSS e várias integrações de headers e includes do PHP.
+Frontend: Desenvolvido com Bootstrap, CSS.
 
 Máscara dos telefone e cep: Biblioteca mask_jquery.
 
