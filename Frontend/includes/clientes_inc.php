@@ -36,7 +36,7 @@ if (!isset($_SESSION['user'])) {
                     <th scope="col"><i class="fas fa-flag-usa"></i>&nbsp;País</th>
                     <th scope="col"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</th>
                     <th scope="col"><i class="fas fa-pen-nib"></i>&nbsp;Ação</th>
-                    <th scope="col"><i class="fas fa-pen-nib"></th>
+                    <th scope="col"></th>
 
                 </tr>
             </thead>
