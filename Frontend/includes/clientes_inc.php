@@ -1,19 +1,21 @@
 <?php include_once '../Backend/Database/connection.php'; ?>
 <?php include_once '../Backend/Database/read.php'; ?>
-<!-- Proteção das páginas -->
+<?php include_once '../Backend/Database/update.php'; ?>
+
+<!-- Protect page -->
 <?php
 if (!isset($_SESSION['user'])) {
     header("location:login.php");
 }
-?>
+?> <!-- End Protect -->
 
 
 <div class="container">
     <div class="">
 
         <!-- Saudação ao usuário -->
-        <?php
-        if (isset($_SESSION["user"])) {
+        <?php  //print_r($id);
+        if (isset($_SESSION['user'])) {
         ?>
             <div class="container" id="saudacao" style="margin-top: 10px; font-weight:bold;">
                 <h3><?php echo "Bem Vindo(a)," . " " . $_SESSION["user"] . "!" ?></h3>
@@ -23,6 +25,13 @@ if (!isset($_SESSION['user'])) {
 
         <!-- Inicio da tabela -->
         <h5 style="color: black;font-weight:bold;margin-top:20px">Lista de Clientes</h5>
+
+        <?php if (isset($msg4)) { ?>
+            <div class="alert alert-info" role="alert">
+                <?php echo $msg4 ?>
+            </div>
+        <?php } ?>
+
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -43,8 +52,13 @@ if (!isset($_SESSION['user'])) {
             <tbody>
 
                 <?php
+
+                $id =  $_SESSION['id'];
+                $query_list = "SELECT * from clientes WHERE id = $id";
+                $query = mysqli_query($conecta, $query_list);
                 while ($array = mysqli_fetch_assoc($query)) {
-                    $id = $array['id'];
+                    $id_client = $array['id_client'];
+
                 ?>
 
 
@@ -59,10 +73,10 @@ if (!isset($_SESSION['user'])) {
                         <td><?php echo $array['pais'] ?></td>
                         <td><?php echo $array['cep'] ?></td>
                         <!-- Button to active modal Edite -->
-                        <td><a class="btn btn-sm" href="editar.php?id=<?php echo $id ?>" data-target="#ExemploModalCentralizado1" style="color:white;background-color:#9a78e2" role="button"><i class="fas fa-edit"></i>&nbsp;Editar</a></td>
+                        <td><a class="btn btn-sm" href="editar.php?id=<?php echo $id_client ?>" data-target="#ExemploModalCentralizado1" style="color:white;background-color:#9a78e2" role="button"><i class="fas fa-edit"></i>&nbsp;Editar</a></td>
                         <!-- Button to active modal Delete -->
                         <td>
-                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $id ?>" style="color:white;">
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $id_client ?>" style="color:white;">
                                 <i class="far fa-trash-alt"></i>&nbsp;Excluir
                             </button>
                         </td>

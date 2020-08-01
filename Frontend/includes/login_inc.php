@@ -1,4 +1,5 @@
 <?php include_once '../Backend/Database/read.php' ?>
+<body id="B">
 <div class="container py-5" style="margin-top: 40px;">
     <div class="container py-5">
         <div class="col-md-6 container clearfix">
@@ -6,6 +7,12 @@
                 <form action="login.php" method="POST" class="py-">
                     <fieldset class="formulario">
                         <h1 class="text-center" id="font">Login</h1>
+
+                        <?php if (isset($ms)) { ?>
+                            <div class="alert alert-danger" style="text-align: center" role="alert">
+                                <?php echo $ms ?>
+                            </div>
+                        <?php } ?>
 
                         <?php if (isset($mensagem)) { ?>
                             <div class="alert alert-danger" style="text-align: center" role="alert">
@@ -18,6 +25,7 @@
                             <div class="col-sm-12">
                                 <div class="input-group-prepend"><span class="input-group-text bg-white px-4 border-md border-right-0"><i class="fas fa-envelope"></i></span>
                                     <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                    <input name="msg" value="<?php echo "1" ?>" style="display: none;">
                                 </div>
                             </div>
                         </div>
@@ -30,13 +38,13 @@
                             </div>
                         </div>
                         <div style="text-align: right;">
-                            <button type="submit" class="btn btn-sm btn-primary"><a id="font"><i class="fas fa-sign-in-alt"></i>&nbsp;Entrar</a></button>
+                            <button type="submit" id="font" class="btn btn-sm btn-primary"><i class="fas fa-sign-in-alt"></i>&nbsp;Entrar</button>
                         </div>
                         <div id="font">Não tem uma conta?&nbsp;<a href="index.php"><i class="far fa-hand-point-left"></i>&nbsp;Cadastre-se</a></div>
-                            <div style="margin-top: 10px">
-                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Entra com Facebook
-                        </fb:login-button>
-                            </div>
+                        <div style="margin-top: 10px">
+                            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Entra com Facebook
+                            </fb:login-button>
+                        </div>
 
                     </fieldset>
                 </form>
@@ -44,7 +52,7 @@
         </div>
     </div>
 </div>
-
+</body>
 
 <!-- SDK JavaScript para logar com facebook -->
 <script>
@@ -86,7 +94,7 @@
         FB.api('/me', function(response) {
             console.log('Successful login for: ' + response.name);
             document.getElementById('status').innerHTML = "";
-                'Thanks for logging in, ' + response.name + '!';
+            'Thanks for logging in, ' + response.name + '!';
         });
     }
 </script>

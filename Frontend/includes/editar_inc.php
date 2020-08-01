@@ -14,12 +14,11 @@ if (!isset($_SESSION['user'])) {
 
 
                 <?php
-                $id = $_GET['id'];
-
-                $sql = "SELECT * FROM  `clientes` WHERE id = $id";
+                $id_client = $_GET['id'];
+                $sql = "SELECT * FROM  clientes WHERE id_client = $id_client";
                 $query = mysqli_query($conecta, $sql);
                 while ($array = mysqli_fetch_assoc($query)) {
-                    $id = $array['id'];
+                    $id_client = $array['id_client'];
                     $nome1 = $array['nome1'];
                     $telefone = $array['telefone'];
                     $endereco = $array['endereco'];
@@ -37,7 +36,7 @@ if (!isset($_SESSION['user'])) {
                         <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Nome do Cliente</label>
                         <input type="text" name="nome1" maxlength="10" value="<?php echo $nome1 ?>" class="form-control" aria-describedby="emailHelp" placeholder="Nome do cliente">
                         <small id="emailHelp" class="form-text text-muted"></small>
-                        <input name="id" value="<?php echo $id ?>" style="display:none">
+                        <input name="id" value="<?php echo $id_client ?>" style="display:none">
                     </div>
 
                     <div class="form-group">

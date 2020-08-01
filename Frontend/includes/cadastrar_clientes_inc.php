@@ -1,5 +1,7 @@
-<?php
-session_start(); 
+<?php include_once '../Backend/Database/read.php';
+$id = $_SESSION['id'];
+
+//session_start(); 
 if (!isset($_SESSION['user'])) {
   header("location:login.php");
 }
@@ -104,6 +106,7 @@ if (!isset($_SESSION['user'])) {
                     <div class="col-md-9 mb-3">
                         <label for="validationCustom05"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</label>
                         <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" required>
+                        <input name="id" value="<?php echo $id ?>" style="display: none;">
                         <div class="invalid-feedback">
                             Por favor, informe um CEP válido.
                         </div>
@@ -125,6 +128,7 @@ if (!isset($_SESSION['user'])) {
 <!-- Mapa -->
 <div class="col-md-6 border" style="margin-top: 13px;">
     <h3 style="text-align: center;">Google Maps</h3>
+    <p style="text-align: center;">(Um mapa aparecerá após inserção do cep.)</p>
     <div class="form-group" id="map-view" style="text-align:center;">
     </div>
 </div>

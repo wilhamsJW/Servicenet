@@ -1,6 +1,7 @@
 <?php include_once '../Backend/Database/connection.php'; ?>
 <?php include_once '../Backend/Database/create.php'; ?>
-<div class="container py-5" style="margin-top: 40px;">
+<body id="B">
+<div class="container py-5">
     <div class="container py-5">
         <div class="col-md-6 container clearfix">
             <fieldset id="formu">
@@ -10,17 +11,24 @@
                             <fieldset class="formulario">
                                 <h1 class="text-center" id="font">Cadastro</h1>
 
+                                <!-- User alert message -->
                                 <?php if (isset($msg1)) { ?>
                                     <div class="alert alert-danger" style="text-align: center" role="alert">
                                         <?php echo $msg1 ?>
                                     </div>
                                 <?php } ?>
 
-                                <?php if (isset($msg)) { ?>
-                                    <div class="alert alert-success" role="alert">
-                                        <?php echo $msg ?>
+                                <?php if (isset($msg2)) { ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        <?php echo $msg2 ?>
                                     </div>
-                                <?php } ?>
+                                <?php } ?> 
+
+                                <?php if (isset($msg3)) { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        <?php echo $msg3 ?>
+                                    </div>
+                                <?php } ?> <!-- end alert message -->
 
 
                                 <div class="form-group row" style="margin-top: 30px">
@@ -66,3 +74,4 @@
         </div>
     </div>
 </div>
+</body>

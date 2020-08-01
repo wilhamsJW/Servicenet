@@ -13,7 +13,7 @@ if (isset($_POST['id'])) {
     $pais    = filter_input(INPUT_POST, 'pais', FILTER_SANITIZE_SPECIAL_CHARS);
     $cep    = filter_input(INPUT_POST, 'cep', FILTER_SANITIZE_SPECIAL_CHARS);
 
-    $sql = "UPDATE `clientes` SET `nome1`='$nome1', `telefone`='$telefone', `endereco`='$endereco', `numero`='$numero', `cidade`='$cidade', `estado`='$estado', `pais`='$pais', `cep`='$cep' WHERE id = $id";
+    $sql = "UPDATE `clientes` SET `nome1`='$nome1', `telefone`='$telefone', `endereco`='$endereco', `numero`='$numero', `cidade`='$cidade', `estado`='$estado', `pais`='$pais', `cep`='$cep' WHERE id_client = $id";
     $query = mysqli_query($conecta, $sql);
 
     $info = mysqli_fetch_assoc($query);
@@ -22,7 +22,7 @@ if (isset($_POST['id'])) {
         echo "Erro na Alteração!";
         header("location:../../Frontend/erro_editar.php");
     } else {
-        $mensagem = "Alterado Com Sucesso";
+        $msg4 = "Alterado Com Sucesso";
         header("location:../../Frontend/clientes.php");
     }
 }

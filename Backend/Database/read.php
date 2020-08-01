@@ -2,45 +2,57 @@
 include_once 'connection.php';
 session_start();
 
-//verficando se os campos estão vazios
-if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
-    header("location:../Frontend/login.php");
-    exit;
-    //$mensagem = "Preencha os campos";
-}
+//$msg = $_POST['msg'];
+if (isset($_POST['msg'])) {
 
-//verificação de email e senha
-if (isset($_POST["email"]) && !empty($_POST["email"])) {
+    $msg = $_POST['msg'];
 
-    $email  = $_POST["email"];
-    $senha = $_POST["senha"];
+    if ($msg == 1) {
+        //verficando se os campos estão vazios
+        if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
+            $ms = "Opss...! Parece que você não preencheu os campos!";
+        }
 
-    $login = "SELECT * "; 
-    $login .= " FROM usuario ";
-    $login .= " WHERE email = '{$email}' and senha = '{$senha}'  "; 
+        //verificação de email e senha
+        if (isset($_POST["email"]) && !empty($_POST["senha"])) {
 
-    $acesso = mysqli_query($conecta, $login); 
-    if (!$acesso) { 
-        die("Falha na consulta!");
+            $email  = $_POST["email"];
+            $senha = $_POST["senha"];
+
+            $login = "SELECT * ";
+            $login .= " FROM usuario ";
+            $login .= " WHERE email = '{$email}' and senha = '{$senha}'  ";
+
+            $query = mysqli_query($conecta, $login);
+            if (!$query) {
+                die("Falha na consulta!");
+            } else {
+                //$ms = "Verifique se senha e email estão corretos!";
+                //header("location:../Frontend/login.php");
+            }
+
+            $informacao = mysqli_fetch_assoc($query);
+
+            if (empty($informacao)) {
+                $mensagem = "Verifique se senha e email estão corretos!";
+                //header("location: ../login2.php");   
+            } else {
+                //Rotina de saudação iniciada aqui
+                $_SESSION['user'] = $informacao["nome"];
+                $_SESSION['id'] = $informacao["id"];
+                header("location:../Frontend/clientes.php");
+            }
+        }
     }
-
-    $informacao = mysqli_fetch_assoc($acesso); 
-
-    if (empty($informacao)) { 
-        $mensagem = "Verifique se senha e email estão corretos!";
-        //header("location: ../login2.php");   
-    } else {
-        //Rotina de saudação iniciada aqui
-        $_SESSION['user'] = $informacao["nome"];
-        header("location:../Frontend/clientes.php");
-    }
-}
-
+} 
 ?>
 
-<?php 
+<?php
+/*
+if ($msg == 2) {
+    $id =  $_SESSION['id'];
 
-    $query_list = "SELECT * FROM clientes";
-    $query = mysqli_query($conecta, $query_list);
-
+    $query_list = "SELECT * from clientes WHERE id = $id";
+    $query = mysqli_query($conecta, $query_list); 
+} */
 ?>

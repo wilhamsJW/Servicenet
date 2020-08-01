@@ -2,7 +2,7 @@
 
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
-$sql = "DELETE FROM `clientes` WHERE id = $id";
+$sql = "DELETE FROM `clientes` WHERE id_client = $id";
 $query = mysqli_query($conecta, $sql);
 
 if (!$query) {
