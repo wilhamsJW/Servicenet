@@ -30,7 +30,7 @@ if (!isset($_SESSION['user'])) {
                         <div class="input-group">
                             <div class="input-group-prepend">
                             </div>
-                            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone ou celular" required>
+                            <input type="text" class="form-control" name="telefone" id="tele" placeholder="Telefone ou celular" required>
                             <div class="invalid-feedback">
                                 Por favor, digite o telefone do cliente.
                             </div>
@@ -140,11 +140,10 @@ if (!isset($_SESSION['user'])) {
 <script type="text/javascript">
     $(function() {
 
-        $('#telefone').mask('(99) 99999-9999');
+        $('#tele').mask('(99) 99999-9999');
         $('#cep').mask('99999-999');
         $('#telefone2').mask('(99) 99999-9999');
         $('#cep2').mask('99999-999');
-        $('#cep3').mask('99999-999');
     })
 
 

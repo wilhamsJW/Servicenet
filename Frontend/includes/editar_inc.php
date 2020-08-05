@@ -40,8 +40,15 @@ if (!isset($_SESSION['user'])) {
                     </div>
 
                     <div class="form-group">
+                        <label for="exampleInputEmail1"><i class="fas fa-user"></i>&nbsp;Teste</label>
+                        <input type="text" name="telefone" id="fone" value="<?php echo $telefone ?>" class="form-control" aria-describedby="emailHelp" placeholder="Teste">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                        <input name="id" value="<?php echo $id_client ?>" style="display:none">
+                    </div>
+
+                    <div class="form-group" style="display: none;">
                         <label for="exampleInputEmail1"><i class="fas fa-phone-square-alt"></i>&nbsp;Telefone</label>
-                        <input type="text" id="telefone2" name="telefone" value="<?php echo $telefone ?>" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
+                        <input type="text"  name="" value="<?php echo $telefone ?>" class="form-control" aria-describedby="emailHelp" placeholder="Telefone">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
 
@@ -77,7 +84,7 @@ if (!isset($_SESSION['user'])) {
 
                     <div class="form-group">
                         <label for="exampleInputEmail1"><i class="fas fa-sort-numeric-up-alt"></i>&nbsp;CEP</label>
-                        <input type="text" name="cep" data-mask="99999-999" value="<?php echo $cep ?>" class="form-control" id="cep" aria-describedby="emailHelp" placeholder="CEP">
+                        <input type="text" name="cep" value="<?php echo $cep ?>" class="form-control" id="cep2" aria-describedby="emailHelp" placeholder="CEP">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
 
@@ -102,13 +109,18 @@ if (!isset($_SESSION['user'])) {
 
 
 <script type="text/javascript">
+/*
 $(function() {
-
-$('#telefone').mask('(99) 99999-9999');
-$('#cep').mask('99999-999');
-$('#telefone2').mask('(99) 99999-9999');
+$('#fone').mask('(99) 99999-9999');
 $('#cep2').mask('99999-999');
-})
+
+});*/
+
+$(document).ready(function () { 
+        $("#fone").mask('(99) 99999-9999', { reverse: true });
+    });
+
+
 
 
 /**

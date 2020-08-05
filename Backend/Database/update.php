@@ -1,7 +1,7 @@
 <?php include_once 'connection.php';
 
 if (isset($_POST['id'])) {
-    echo $id = $_POST['id'];
+    $id = $_POST['id'];
   
     $id            = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
     $nome1   = filter_input(INPUT_POST, 'nome1', FILTER_SANITIZE_SPECIAL_CHARS);
