@@ -13,7 +13,7 @@ Máscara dos telefone e cep: Biblioteca mask_jquery.
 
 Atualização do cep: https://viacep.com.br/ 
 
-Atualização do mapa: Fonte: Google Maps, dentro da mesma requisição json do cep coloquei
+Atualização do mapa: Fonte: Google Maps, dentro da mesma requisição Ajax do cep coloquei
 o mapa dentro pra ser adicionado com: $("#map-view").append(...aqui dentro ficou o iframe do mapa...), substituindo 
 os campos de cidade, bairro... por uma template string, dessa forma toda vez que o cep atualiza automaticamente, 
 atualiza o mapa também via json.
